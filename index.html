@@ -4,25 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AI-powered eye disease diagnosis tool. Upload eye images for instant analysis and health insights.">
+    <meta name="theme-color" content="#667eea">
     <title>Eye Disease Diagnosis - AI-Powered Analysis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Skip link for keyboard users -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- TOP NAVIGATION -->
+<nav class="top-nav" role="navigation" aria-label="Primary">
+    <div class="nav-inner">
+        <a class="logo" href="index.html">👁️ EyeAI</a>
+        <div class="nav-links" role="menubar">
+            <a role="menuitem" href="index.html">Home</a>
+            <a role="menuitem" href="disease.html">Diseases</a>
+            <a role="menuitem" href="#how-it-works">How It Works</a>
+            <a role="menuitem" href="app.html">About</a>
+        </div>
+    </div>
+</nav>
+
+
 <!-- HEADER -->
-<header>
+<header role="banner">
     <h1>👁️ Eye Disease Diagnosis</h1>
     <h3>AI-Powered Eye Health Analysis</h3>
     <p id="abstract">Upload an image of your eye to get instant AI-powered analysis with confidence scores, diagnosis information, and recommended next steps.</p>
 </header>
 
 <!-- MAIN CONTENT -->
-<main>
+<main id="main" role="main">
+    <!-- HERO GUIDANCE -->
+    <section class="card hero-guidance" id="how-it-works">
+        <h2>Why upload matters & how to prepare</h2>
+        <ul>
+            <li><strong>Why:</strong> A clear photo helps the AI detect changes accurately.</li>
+            <li><strong>How:</strong> Use good lighting, center the eye, avoid heavy reflections, and keep the eyelids open.</li>
+            <li><strong>Expect:</strong> Instant confidence scores, suggested next steps, and links to trusted disease resources.</li>
+        </ul>
+    </section>
     <!-- Upload Section -->
     <section class="card upload-section fade-in">
         <h2>📤 Upload Eye Image</h2>
         <p style="color: #7f8c8d; margin-bottom: 20px;">Drag and drop or click to select your eye image</p>
-        <div id="drop-area">
+        <div id="drop-area" tabindex="0" role="button" aria-label="Upload eye image drop area">
             <p>🖼️ Drag image here or <span style="color: #667eea; font-weight: 600; cursor: pointer;">click to browse</span></p>
             <input type="file" id="eyeImage" accept="image/*" aria-label="Select eye image">
         </div>
@@ -98,6 +125,13 @@
     </section>
 
 </main>
+
+    <!-- DISCLAIMER -->
+    <section class="card disclaimer" aria-live="polite">
+        <h3>AI Disclaimer</h3>
+        <p>This tool provides informational analysis only and is not a medical diagnosis. For any concerning findings, please consult a qualified eye care professional. AI results may have limitations—use them as a supplement, not a replacement, for professional care.</p>
+        <p style="margin-top:8px; font-size:0.95em; color:#666;">Sources: Public ophthalmology resources and peer-reviewed summaries.</p>
+    </section>
 
 <!-- FOOTER -->
 <footer>

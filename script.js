@@ -90,6 +90,14 @@ function initializeUploadHandlers() {
     // Handle click to select files
     dropArea.addEventListener('click', () => eyeImage.click());
 
+    // Make drop area keyboard accessible (Enter / Space)
+    dropArea.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            eyeImage.click();
+        }
+    });
+
     // Handle file selection
     eyeImage.addEventListener('change', () => handleFiles(eyeImage.files));
 }
@@ -108,7 +116,13 @@ function handleFiles(files) {
     const reader = new FileReader();
     reader.onload = function(e) {
         const preview = document.getElementById('preview');
-        preview.innerHTML = `<img src="${e.target.result}" alt="Uploaded Eye Image" class="loaded"/>`;
+        preview.innerHTML = `<img src="${e.target.result}" alt="Uploaded Eye Image" class="loaded" loading="lazy"/>`;
+        // provide a subtle flash to indicate upload succeeded
+        const dropAreaEl = document.getElementById('drop-area');
+        if (dropAreaEl) {
+            dropAreaEl.classList.add('drop-flash');
+            setTimeout(() => dropAreaEl.classList.remove('drop-flash'), 900);
+        }
         
         // Show results section
         const resultsSection = document.getElementById('results-section');
@@ -178,6 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTabs();
     initializeUploadHandlers();
     initializeFadeInAnimations();
+    initializeTooltips();
 
     // Add smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

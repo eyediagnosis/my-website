@@ -21,6 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.6;
+    padding-top: 64px; /* leave room for fixed nav */
 }
 
 /* ============================================
@@ -69,11 +70,110 @@ header h3 {
 }
 
 header #abstract {
-    font-style: italic;
     font-size: 1.05em;
-    opacity: 0.9;
-    max-width: 600px;
+    opacity: 0.98;
+    max-width: 700px;
     margin: 0 auto;
+    color: rgba(255,255,255,0.98);
+    font-weight: 500;
+}
+
+/* Fixed top navigation */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(255,255,255,0.98);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+.top-nav .nav-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-nav .logo {
+    font-weight: 700;
+    color: #2c3e50;
+    text-decoration: none;
+}
+.top-nav .nav-links a {
+    margin-left: 18px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+}
+.top-nav .nav-links a:hover,
+.top-nav .nav-links a:focus {
+    color: #667eea;
+}
+
+/* Skip link - visible on focus */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: fixed;
+    left: 12px;
+    top: 72px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: #fff;
+    color: #333;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    z-index: 1100;
+}
+
+/* Improve default paragraph contrast */
+p {
+    color: #2c3e50;
+}
+
+/* Hero guidance card */
+.hero-guidance ul {
+    margin-top: 12px;
+    list-style: disc;
+    padding-left: 20px;
+    color: #34495e;
+}
+
+/* Disclaimer styling */
+.disclaimer {
+    margin: 30px auto 20px;
+    background: linear-gradient(90deg, #fff 0%, #f7fbff 100%);
+    border-left: 4px solid #f39c12;
+    color: #2c3e50;
+}
+
+/* Focus outlines for accessibility */
+a:focus, button:focus, input:focus {
+    outline: 3px solid rgba(102,126,234,0.25);
+    outline-offset: 2px;
+}
+
+/* Upload microinteraction flash */
+.drop-flash {
+    animation: dropFlash 0.9s ease;
+}
+@keyframes dropFlash {
+    0% { box-shadow: 0 0 0 0 rgba(102,126,234,0.0); }
+    50% { box-shadow: 0 8px 30px rgba(102,126,234,0.18); }
+    100% { box-shadow: 0 0 0 0 rgba(102,126,234,0); }
 }
 
 /* ============================================
