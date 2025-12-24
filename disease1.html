@@ -4,49 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Comprehensive guide on Glaucoma - symptoms, causes, treatment options, and management strategies.">
-    <meta name="theme-color" content="#667eea">
     <title>Glaucoma - Detailed Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Skip link for keyboard users -->
-<a class="skip-link" href="#main">Skip to content</a>
+<!-- HEADER -->
+<header>
+    <div class="header-island" role="region" aria-label="Primary header actions">
+        <div class="header-button-row" aria-hidden="false">
+            <a class="header-button" href="index.html">Home</a>
+            <a class="header-button" href="disease.html">Disease Info</a>
+            <a class="header-button" href="app.html">App Info</a>
+            <a class="header-button" href="random.html">Random</a>
+            <a class="header-button" href="about.html">About Us</a>
+        </div>
 
-<!-- TOP NAVIGATION -->
-<nav class="top-nav" role="navigation" aria-label="Primary">
-    <div class="nav-inner">
-        <a class="logo" href="index.html">👁️ EyeAI</a>
-        <div class="nav-links" role="menubar">
-            <a role="menuitem" href="index.html">Home</a>
-            <a role="menuitem" href="disease.html">Diseases</a>
-            <a role="menuitem" href="index.html#how-it-works">How It Works</a>
-            <a role="menuitem" href="app.html">About</a>
+        <div class="header-main">
+            <h1>👁 Glaucoma</h1>
+            <h3>Understanding Optic Nerve Damage</h3>
+            <p id="abstract">
+                Glaucoma is a serious eye disease characterized by increased intraocular pressure that damages the optic nerve. Early detection and treatment are crucial to prevent vision loss.
+            </p>
         </div>
     </div>
-</nav>
-
-<!-- HEADER -->
-<header role="banner">
-    <h1>👁 Glaucoma</h1>
-    <h3>Understanding Optic Nerve Damage</h3>
-    <p id="abstract">
-        Glaucoma is a serious eye disease characterized by increased intraocular pressure that damages the optic nerve. Early detection and treatment are crucial to prevent vision loss.
-    </p>
 </header>
 
 <!-- MAIN CONTENT -->
-<main id="main" role="main">
-    
-    <!-- Disease Overview Section -->
+<main>
+    <div style="max-width:1200px; margin:12px auto 0; text-align:left;">
+        <button class="btn btn-secondary" onclick="location.href='disease.html'">← Back to Diseases</button>
+    </div>
+
     <!-- Disease Overview Section -->
     <section class="disease-header" style="margin-bottom: 30px;">
-        <div class="disease-hero-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glaucoma icon">
-                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" stroke="#ffffff" stroke-width="1.2" fill="rgba(255,255,255,0.06)"/>
-                <circle cx="12" cy="12" r="3" fill="#ffffff" opacity="0.95"/>
-            </svg>
-        </div>
         <h2 style="color: white;">Quick Overview</h2>
         <p>Glaucoma affects millions worldwide and is a leading cause of irreversible blindness. The good news is that with early treatment, you can often stop further vision loss.</p>
     </section>
@@ -242,11 +233,10 @@
     </div>
 </div>
 
+
 <!-- FOOTER -->
 <footer>
-    <button aria-label="Back to Diseases" onclick="location.href='disease.html'">← Back to Diseases</button>
-    <button aria-label="Go to Home" onclick="location.href='index.html'">🏠 Home</button>
-    <button aria-label="About this App" onclick="location.href='app.html'">ℹ️ App Info</button>
+    <div style="width:100%; text-align:center; color: white; opacity:0.9;">&copy; <span id="year"></span> Eye Disease Diagnosis</div>
 </footer>
 
 <script src="script.js"></script>

@@ -90,14 +90,6 @@ function initializeUploadHandlers() {
     // Handle click to select files
     dropArea.addEventListener('click', () => eyeImage.click());
 
-    // Make drop area keyboard accessible (Enter / Space)
-    dropArea.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            eyeImage.click();
-        }
-    });
-
     // Handle file selection
     eyeImage.addEventListener('change', () => handleFiles(eyeImage.files));
 }
@@ -116,13 +108,7 @@ function handleFiles(files) {
     const reader = new FileReader();
     reader.onload = function(e) {
         const preview = document.getElementById('preview');
-        preview.innerHTML = `<img src="${e.target.result}" alt="Uploaded Eye Image" class="loaded" loading="lazy"/>`;
-        // provide a subtle flash to indicate upload succeeded
-        const dropAreaEl = document.getElementById('drop-area');
-        if (dropAreaEl) {
-            dropAreaEl.classList.add('drop-flash');
-            setTimeout(() => dropAreaEl.classList.remove('drop-flash'), 900);
-        }
+        preview.innerHTML = `<img src="${e.target.result}" alt="Uploaded Eye Image" class="loaded"/>`;
         
         // Show results section
         const resultsSection = document.getElementById('results-section');
@@ -159,6 +145,53 @@ function simulateAIAnalysis() {
     if (confidenceEl) confidenceEl.textContent = `${randomCondition.confidence}%`;
     if (definitionEl) definitionEl.textContent = `This is a sample diagnosis for "${randomCondition.name}". Click "Learn More" to get detailed information about this condition.`;
     if (futureEl) futureEl.textContent = 'Schedule a follow-up appointment with an ophthalmologist within 2 weeks. In the meantime, monitor any vision changes.';
+
+    // Update result actions (show Learn More button and wire navigation)
+    updateResultActions(randomCondition.name);
+}
+
+// Map predicted condition names to local disease pages
+const diseasePageMap = {
+    'Glaucoma': 'disease1.html',
+    'Cataract': 'disease2.html',
+    'Diabetic Retinopathy': 'disease3.html',
+    'Healthy Eye': 'disease.html'
+};
+
+function updateResultActions(conditionName) {
+    const btn = document.getElementById('learn-more-btn');
+    if (!btn) return;
+
+    const page = diseasePageMap[conditionName] || 'disease.html';
+    btn.style.display = 'inline-block';
+    // Special case for Healthy Eye: guide user to other disease info
+    if (conditionName === 'Healthy Eye') {
+        btn.textContent = 'Learn more about other diseases';
+        btn.onclick = function() {
+            showLoadingOverlay('Opening disease list...');
+            setTimeout(() => {
+                window.location.href = page; // disease.html acts as the general list
+            }, 900);
+        };
+    } else {
+        btn.textContent = `Learn more about ${conditionName}`;
+        btn.onclick = function() {
+            showLoadingOverlay(`Opening ${conditionName}...`);
+            // short pause to allow overlay animation, then navigate
+            setTimeout(() => {
+                window.location.href = page;
+            }, 900);
+        };
+    }
+}
+
+function showLoadingOverlay(message) {
+    const overlay = document.getElementById('loading-overlay');
+    if (!overlay) return;
+    const text = overlay.querySelector('.loader-text');
+    if (text) text.textContent = message || 'Loading…';
+    overlay.classList.add('show');
+    overlay.setAttribute('aria-hidden', 'false');
 }
 
 // ============================================
@@ -192,7 +225,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTabs();
     initializeUploadHandlers();
     initializeFadeInAnimations();
-    initializeTooltips();
 
     // Add smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -204,6 +236,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    // set footer year if present
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
 // ============================================

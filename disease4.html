@@ -3,49 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Macular Degeneration: overview of dry and wet forms, risk factors, and treatment options to preserve central vision.">
-    <meta name="theme-color" content="#667eea">
-    <title>Macular Degeneration - Detailed Guide</title>
+    <meta name="description" content="Comprehensive guide on eye disease - symptoms, causes, treatment options, and management strategies.">
+    <title>Eye Disease - Detailed Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Skip link for keyboard users -->
-<a class="skip-link" href="#main">Skip to content</a>
+<!-- HEADER -->
+<header>
+    <div class="header-island" role="region" aria-label="Primary header actions">
+        <div class="header-button-row" aria-hidden="false">
+            <a class="header-button" href="index.html">Home</a>
+            <a class="header-button" href="disease.html">Disease Info</a>
+            <a class="header-button" href="app.html">App Info</a>
+            <a class="header-button" href="random.html">Random</a>
+            <a class="header-button" href="about.html">About Us</a>
+        </div>
 
-<!-- TOP NAVIGATION -->
-<nav class="top-nav" role="navigation" aria-label="Primary">
-    <div class="nav-inner">
-        <a class="logo" href="index.html">👁️ EyeAI</a>
-        <div class="nav-links" role="menubar">
-            <a role="menuitem" href="index.html">Home</a>
-            <a role="menuitem" href="disease.html">Diseases</a>
-            <a role="menuitem" href="index.html#how-it-works">How It Works</a>
-            <a role="menuitem" href="app.html">About</a>
+        <div class="header-main">
+            <h1>[DISEASE ICON] [DISEASE NAME]</h1>
+            <h3>[DISEASE SUBTITLE]</h3>
+            <p id="abstract">
+                [DISEASE DESCRIPTION]. Learn about symptoms, causes, treatment options, and recommended next steps.
+            </p>
         </div>
     </div>
-</nav>
-
-<!-- HEADER -->
-<header role="banner">
-    <h1>[DISEASE ICON] [DISEASE NAME]</h1>
-    <h3>[DISEASE SUBTITLE]</h3>
-    <p id="abstract">
-        [DISEASE DESCRIPTION]. Learn about symptoms, causes, treatment options, and recommended next steps.
-    </p>
 </header>
 
 <!-- MAIN CONTENT -->
-<main id="main" role="main">
+<main>
+    <div style="max-width:1200px; margin:12px auto 0; text-align:left;">
+        <button class="btn btn-secondary" onclick="location.href='disease.html'">← Back to Diseases</button>
+    </div>
     
     <!-- Disease Overview Section -->
     <section class="disease-header" style="margin-bottom: 30px;">
-        <div class="disease-hero-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Macular degeneration icon">
-                <path d="M12 2 C8 6, 4 8, 2 12 C4 16, 8 18, 12 22 C16 18, 20 16, 22 12 C20 8, 16 6, 12 2 Z" fill="rgba(255,255,255,0.05)"/>
-                <circle cx="12" cy="10" r="3" fill="#ffffff"/>
-            </svg>
-        </div>
         <h2 style="color: white;">Quick Overview</h2>
         <p>Understanding this eye condition is important for early detection and effective management. This guide provides comprehensive information about the disease.</p>
     </section>
@@ -215,9 +207,7 @@
 
 <!-- FOOTER -->
 <footer>
-    <button aria-label="Back to Diseases" onclick="location.href='disease.html'"> Back to Diseases</button>
-    <button aria-label="Go to Home" onclick="location.href='index.html'"> Home</button>
-    <button aria-label="About this App" onclick="location.href='app.html'">ℹ App Info</button>
+    <div style="width:100%; text-align:center; color: white; opacity:0.9;">&copy; <span id="year"></span> Eye Disease Diagnosis</div>
 </footer>
 
 <script src="script.js"></script>
