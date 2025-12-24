@@ -181,6 +181,22 @@ p {
     color: #34495e;
 }
 
+/* Disease page hero icon */
+.disease-hero-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+.disease-header .disease-hero-icon svg {
+    width: 56px;
+    height: 56px;
+}
+
 /* Disclaimer styling */
 .disclaimer {
     margin: 30px auto 20px;
