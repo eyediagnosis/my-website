@@ -3,27 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random - Eye Diagnosis</title>
+    <meta name="description" content="Explore interactive tools and fun features for learning about eye health.">
+    <title>Interactive Tools - Eye Disease Diagnosis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Random</h1>
-        <h3>Fun and experimental features coming soon!</h3>
-        <p id="abstract">This page will contain random tools or info for users to explore.</p>
-    </header>
 
-    <main>
-        <section class="card">
-            <h2>Coming Soon</h2>
-            <p>Exciting new tools and interactive features will be available here in future updates.</p>
-        </section>
-    </main>
+<!-- HEADER -->
+<header>
+    <h1>🎮 Interactive Tools</h1>
+    <h3>Explore Eye Health with Engaging Features</h3>
+    <p id="abstract">
+        Discover interactive tools and fun ways to learn about eye health, test your knowledge, and explore eye diseases in creative ways.
+    </p>
+</header>
 
-    <footer>
-        <button onclick="location.href='index.html'">Home</button>
-        <button onclick="location.href='disease.html'">Disease Info</button>
-        <button onclick="location.href='app.html'">App Info</button>
-    </footer>
+<!-- MAIN CONTENT -->
+<main>
+    
+    <!-- Random Disease Feature -->
+    <section class="card fade-in">
+        <h2>🎲 Random Disease Explorer</h2>
+        <p>Learn about a random eye disease each time you visit. Great for expanding your knowledge of eye conditions!</p>
+        <button class="btn" onclick="goToRandomDisease()" style="margin-top: 15px;">Discover a Random Disease</button>
+        <p id="random-disease-display" style="margin-top: 15px; color: #666;"></p>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="card fade-in">
+        <h2>❓ Eye Health Quiz</h2>
+        <p>Test your knowledge about eye diseases and see how much you know!</p>
+        <button class="btn" onclick="startQuiz()" style="margin-top: 15px;">Take the Quiz</button>
+    </section>
+
+    <!-- Eye Symptom Checker -->
+    <section class="card fade-in">
+        <h2>🔍 Symptom Checker</h2>
+        <p>Tell us about your symptoms and we'll help you identify which diseases might be related.</p>
+        <div style="margin-top: 20px;">
+            <label style="display: block; margin-bottom: 10px;">
+                <input type="checkbox"> Blurred Vision
+            </label>
+            <label style="display: block; margin-bottom: 10px;">
+                <input type="checkbox"> Eye Pain
+            </label>
+            <label style="display: block; margin-bottom: 10px;">
+                <input type="checkbox"> Halos Around Lights
+            </label>
+            <label style="display: block; margin-bottom: 10px;">
+                <input type="checkbox"> Redness
+            </label>
+            <button class="btn" onclick="checkSymptoms()" style="margin-top: 15px;">Check Results</button>
+        </div>
+    </section>
+
+    <!-- Disease Comparison Tool -->
+    <section class="card fade-in">
+        <h2>⚖️ Disease Comparison</h2>
+        <p>Compare two eye diseases side-by-side to understand their differences and similarities.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+            <div>
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">Disease 1</label>
+                <select style="width: 100%; padding: 10px; border: 2px solid #ecf0f1; border-radius: 8px; font-size: 1em;">
+                    <option>Select a disease</option>
+                    <option>Glaucoma</option>
+                    <option>Cataracts</option>
+                    <option>Diabetic Retinopathy</option>
+                    <option>Macular Degeneration</option>
+                    <option>Retinitis Pigmentosa</option>
+                    <option>Conjunctivitis</option>
+                    <option>Uveitis</option>
+                    <option>Keratoconus</option>
+                </select>
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 8px; font-weight: 600;">Disease 2</label>
+                <select style="width: 100%; padding: 10px; border: 2px solid #ecf0f1; border-radius: 8px; font-size: 1em;">
+                    <option>Select a disease</option>
+                    <option>Glaucoma</option>
+                    <option>Cataracts</option>
+                    <option>Diabetic Retinopathy</option>
+                    <option>Macular Degeneration</option>
+                    <option>Retinitis Pigmentosa</option>
+                    <option>Conjunctivitis</option>
+                    <option>Uveitis</option>
+                    <option>Keratoconus</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn" onclick="compareDisease()" style="margin-top: 15px; width: 100%;">Compare</button>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="card fade-in">
+        <h2>💡 Did You Know?</h2>
+        <button class="btn" onclick="showFunFact()" style="margin-top: 0;">Get a Random Eye Fact</button>
+        <div id="fact-display" style="margin-top: 20px; padding: 20px; background: #f8f9ff; border-radius: 8px; border-left: 4px solid #667eea; display: none;">
+            <p id="fact-text" style="font-size: 1.1em; line-height: 1.6;"></p>
+        </div>
+    </section>
+
+    <!-- Educational Resources -->
+    <section class="card fade-in">
+        <h2>📚 Educational Resources</h2>
+        <p style="margin-bottom: 20px;">Expand your knowledge with these eye health resources:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+            <div style="background: #f8f9ff; padding: 20px; border-radius: 8px; text-align: center;">
+                <h4>Video Tutorials</h4>
+                <p style="font-size: 0.9em; color: #666;">Coming Soon</p>
+            </div>
+            <div style="background: #f8f9ff; padding: 20px; border-radius: 8px; text-align: center;">
+                <h4>Downloadable Guides</h4>
+                <p style="font-size: 0.9em; color: #666;">Coming Soon</p>
+            </div>
+            <div style="background: #f8f9ff; padding: 20px; border-radius: 8px; text-align: center;">
+                <h4>Expert Articles</h4>
+                <p style="font-size: 0.9em; color: #666;">Coming Soon</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <button onclick="location.href='index.html'">🏠 Home</button>
+    <button onclick="location.href='disease.html'">📚 Disease Info</button>
+    <button onclick="location.href='app.html'">ℹ️ App Info</button>
+</footer>
+
+<script>
+    // Random Disease Feature
+    const diseases = ['disease1.html', 'disease2.html', 'disease3.html', 'disease4.html', 'disease5.html', 'disease6.html', 'disease7.html', 'disease8.html'];
+    const diseaseNames = ['Glaucoma', 'Cataracts', 'Diabetic Retinopathy', 'Macular Degeneration', 'Retinitis Pigmentosa', 'Conjunctivitis', 'Uveitis', 'Keratoconus'];
+
+    function goToRandomDisease() {
+        const randomIndex = Math.floor(Math.random() * diseases.length);
+        const selectedDisease = diseaseNames[randomIndex];
+        document.getElementById('random-disease-display').textContent = `Navigating to: ${selectedDisease}...`;
+        setTimeout(() => {
+            location.href = diseases[randomIndex];
+        }, 800);
+    }
+
+    function startQuiz() {
+        alert('Quiz feature coming soon! Test your eye health knowledge with interactive questions.');
+    }
+
+    function checkSymptoms() {
+        alert('Based on selected symptoms, please visit the Disease Info page to learn more about conditions that match your symptoms.');
+    }
+
+    function compareDisease() {
+        alert('Disease comparison feature coming soon! You\'ll be able to see detailed side-by-side comparisons.');
+    }
+
+    const eyeFacts = [
+        '👁️ The human eye can distinguish approximately 10 million different colors.',
+        '👁️ Your eyes are about 1 inch in diameter and weigh about 0.25 ounces.',
+        '👁️ The eye muscles are the most active muscles in the human body.',
+        '👁️ Tears are produced constantly, even when you\'re not crying. You produce about 1-2 liters of tears per day.',
+        '👁️ It takes about 2 million brain cells to process what you see in just one glance.',
+        '👁️ You blink about 17 times per minute, or about 14,400 times per day.',
+        '👁️ Your eyes start to age around 40, which is why reading glasses become necessary.',
+        '👁️ Glaucoma is often called "the silent thief of sight" because it typically has no early symptoms.',
+        '👁️ The cornea is the only part of the human body with no blood vessels.',
+        '👁️ About 2.2 billion people worldwide have a vision impairment or blindness.'
+    ];
+
+    function showFunFact() {
+        const randomFact = eyeFacts[Math.floor(Math.random() * eyeFacts.length)];
+        const factDisplay = document.getElementById('fact-display');
+        document.getElementById('fact-text').textContent = randomFact;
+        factDisplay.style.display = 'block';
+        factDisplay.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>

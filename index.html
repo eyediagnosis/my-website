@@ -3,46 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eye Diagnosis</title>
+    <meta name="description" content="AI-powered eye disease diagnosis tool. Upload eye images for instant analysis and health insights.">
+    <title>Eye Disease Diagnosis - AI-Powered Analysis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Eye Diagnosis</h1>
-        <h3>Your tool for analyzing eye images and learning about eye health</h3>
-        <p id="abstract">Upload an image of your eye to get an AI-generated report with confidence scores, diagnosis info, and recommended actions.</p>
-    </header>
 
-    <!-- Main Section -->
-    <main>
-        <!-- Drag & Drop Upload Section -->
-        <section id="upload-section" class="card fade-in">
-            <h2>Upload Eye Image</h2>
-            <div id="drop-area">
-                <p>Drag & drop your image here, or click to select</p>
-                <input type="file" id="eyeImage" accept="image/*">
+<!-- HEADER -->
+<header>
+    <h1>👁️ Eye Disease Diagnosis</h1>
+    <h3>AI-Powered Eye Health Analysis</h3>
+    <p id="abstract">Upload an image of your eye to get instant AI-powered analysis with confidence scores, diagnosis information, and recommended next steps.</p>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+    <!-- Upload Section -->
+    <section class="card upload-section fade-in">
+        <h2>📤 Upload Eye Image</h2>
+        <p style="color: #7f8c8d; margin-bottom: 20px;">Drag and drop or click to select your eye image</p>
+        <div id="drop-area">
+            <p>🖼️ Drag image here or <span style="color: #667eea; font-weight: 600; cursor: pointer;">click to browse</span></p>
+            <input type="file" id="eyeImage" accept="image/*" aria-label="Select eye image">
+        </div>
+        <div id="preview"></div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="card results-section fade-in" style="display: none;" id="results-section">
+        <h2>📊 Analysis Report</h2>
+        
+        <!-- Tabs for Results -->
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="diagnosis-tab">Diagnosis</button>
+                <button class="tab-button" data-tab="details-tab">Details</button>
+                <button class="tab-button" data-tab="actions-tab">Recommendations</button>
             </div>
-            <div id="preview"></div>
-        </section>
 
-        <!-- Results Section -->
-        <section id="results" class="card fade-in">
-            <h2>Analysis Report</h2>
-            <div class="result-card" id="confidence">Confidence: N/A</div>
-            <div class="result-card" id="diagnosis">Diagnosis: N/A</div>
-            <div class="result-card" id="future">Future Actions: N/A</div>
-            <div class="result-card" id="definition">Definition: N/A</div>
-        </section>
-    </main>
+            <!-- Diagnosis Tab -->
+            <div id="diagnosis-tab" class="tab-content active">
+                <div class="result-card">
+                    <strong>Detected Condition:</strong> <span id="diagnosis">N/A</span>
+                </div>
+                <div class="result-card">
+                    <strong>Confidence Score:</strong> 
+                    <span id="confidence">N/A</span>
+                    <div class="tooltip">
+                        ℹ️
+                        <span class="tooltiptext">How confident the AI is in this diagnosis</span>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Footer / Navigation -->
-    <footer>
-        <button onclick="location.href='disease.html'">Disease Info</button>
-        <button onclick="location.href='app.html'">App Info</button>
-        <button onclick="location.href='random.html'">Random</button>
-    </footer>
+            <!-- Details Tab -->
+            <div id="details-tab" class="tab-content">
+                <div class="result-card">
+                    <strong>Definition:</strong>
+                    <p id="definition" style="margin-top: 8px;">N/A</p>
+                </div>
+            </div>
 
-    <script src="script.js"></script>
+            <!-- Recommendations Tab -->
+            <div id="actions-tab" class="tab-content">
+                <div class="result-card">
+                    <strong>Next Steps:</strong>
+                    <p id="future" style="margin-top: 8px;">N/A</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn" onclick="document.getElementById('results-section').style.display='none'; document.getElementById('drop-area').value='';" style="margin-top: 20px;">
+            ↻ Analyze Another Image
+        </button>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="card fade-in" style="text-align: center; max-width: 800px; margin-top: 40px;">
+        <h2>ℹ️ How It Works</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div>
+                <h3 style="color: #667eea;">1. Upload</h3>
+                <p>Select a clear image of your eye</p>
+            </div>
+            <div>
+                <h3 style="color: #667eea;">2. Analyze</h3>
+                <p>AI processes the image instantly</p>
+            </div>
+            <div>
+                <h3 style="color: #667eea;">3. Learn</h3>
+                <p>Get detailed health insights</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <button onclick="location.href='disease.html'">📚 Disease Info</button>
+    <button onclick="location.href='app.html'">ℹ️ App Info</button>
+    <button onclick="location.href='random.html'">🎲 Random</button>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>

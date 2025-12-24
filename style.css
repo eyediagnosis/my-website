@@ -1,86 +1,420 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-/* Reset & basics */
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-    color: #333;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #2c3e50;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
 }
 
-/* Header */
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
 header {
-    background: #0077cc;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,30 Q300,80 600,30 T1200,30 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+    background-size: cover;
+    pointer-events: none;
+}
+
+header * {
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
-    font-size: 3em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    font-weight: 700;
     margin-bottom: 10px;
+    letter-spacing: -1px;
 }
 
 header h3 {
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 1.3em;
     margin-bottom: 15px;
+    opacity: 0.95;
 }
 
 header #abstract {
     font-style: italic;
-    font-size: 1.1em;
+    font-size: 1.05em;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* Main content */
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
 main {
     flex: 1;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 50px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
 }
 
+/* Card base styles */
 .card {
-    background: #ffffffcc;
-    padding: 25px 30px;
-    margin: 20px 0;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 700px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.2);
 }
 
-/* Drag & drop upload */
-#drop-area {
-    border: 2px dashed #0077cc;
+/* Disease cards grid */
+main.disease-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.disease-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+}
+
+.disease-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 16px 40px rgba(102, 126, 234, 0.25);
+    border-color: #667eea;
+}
+
+.disease-card-icon {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: white;
+}
+
+.disease-card-content {
+    padding: 25px;
+    flex: 1;
+}
+
+.disease-card h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.3em;
+}
+
+.disease-card p {
+    color: #7f8c8d;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Container for disease pages */
+.disease-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.disease-container .card {
+    margin: 0;
+}
+
+/* Disease header section */
+.disease-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
     padding: 40px;
     border-radius: 12px;
-    cursor: pointer;
-    transition: background 0.3s;
+    margin-bottom: 30px;
     text-align: center;
+    position: relative;
+}
+
+.disease-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.disease-header p {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+/* ============================================
+   TABS & TAB CONTENT
+   ============================================ */
+.tabs-container {
+    margin-bottom: 30px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #ecf0f1;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1em;
     font-weight: 500;
+    color: #7f8c8d;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tab-button:hover {
+    color: #667eea;
+}
+
+.tab-button.active {
+    color: #667eea;
+    border-bottom: 3px solid #667eea;
+    margin-bottom: -2px;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   MODALS & TOOLTIPS
+   ============================================ */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ecf0f1;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    border-bottom: 2px dotted #667eea;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 15px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9em;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ============================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ============================================ */
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: #ecf0f1;
+    color: #2c3e50;
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background: #bdc3c7;
+}
+
+/* ============================================
+   UPLOAD SECTION
+   ============================================ */
+.upload-section {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#drop-area {
+    border: 3px dashed #667eea;
+    padding: 60px 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: #f8f9ff;
+}
+
+#drop-area:hover {
+    background: #f0f3ff;
+    border-color: #764ba2;
 }
 
 #drop-area.hover {
-    background: #0077cc22;
+    background: #667eea11;
+    border-color: #667eea;
+    transform: scale(1.02);
+}
+
+#drop-area p {
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin: 0;
 }
 
 #drop-area input {
@@ -88,66 +422,109 @@ main {
 }
 
 #preview img {
-    margin-top: 15px;
+    margin-top: 20px;
     max-width: 100%;
-    border: 2px solid #0077cc;
+    max-height: 300px;
     border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-/* Result cards */
-.result-card {
-    background: #ffffffdd;
-    padding: 15px 20px;
-    margin: 10px 0;
-    border-left: 6px solid #0077cc;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+#preview img.loaded {
+    opacity: 1;
 }
 
-/* Footer / Navigation */
+/* ============================================
+   RESULT CARDS
+   ============================================ */
+.results-section {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.result-card {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    padding: 20px 25px;
+    margin: 15px 0;
+    border-left: 5px solid #667eea;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.15);
+    transform: translateX(5px);
+}
+
+/* ============================================
+   FOOTER & NAVIGATION
+   ============================================ */
 footer {
-    background: #0077cc;
-    padding: 20px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 30px 20px;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+    gap: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
 }
 
 footer button {
     background: white;
     border: none;
     padding: 12px 25px;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 1em;
     cursor: pointer;
     font-weight: 600;
-    color: #0077cc;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    color: #2c3e50;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 footer button:hover {
-    background: #0077cc;
+    background: #667eea;
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
-/* Smooth headings */
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
 h2 {
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 15px;
-    color: #0077cc;
+    color: #667eea;
+    font-weight: 600;
 }
 
-/* Fade-in animation */
+h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+p {
+    color: #555;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -156,35 +533,115 @@ h2 {
     transform: translateY(0);
 }
 
-/* Responsive adjustments */
+.slide-in {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    main {
+        padding: 40px 15px;
+    }
+
+    .disease-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
+    header {
+        padding: 40px 15px;
+    }
+
     header h1 {
-        font-size: 2.2em;
+        font-size: 2.5em;
     }
+
     header h3 {
-        font-size: 1em;
+        font-size: 1.1em;
     }
-    #drop-area {
+
+    main {
         padding: 30px 15px;
     }
-    .card {
-        width: 95%;
-        padding: 20px;
+
+    main.disease-grid {
+        grid-template-columns: 1fr;
     }
+
+    .disease-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tabs {
+        gap: 5px;
+    }
+
+    .tab-button {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+
+    .upload-section,
+    .results-section {
+        padding: 25px;
+    }
+
+    #drop-area {
+        padding: 40px 20px;
+    }
+
+    .modal-content {
+        padding: 30px;
+        width: 95%;
+    }
+
     footer {
         flex-direction: column;
         gap: 10px;
     }
+
     footer button {
-        width: 90%;
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
+
     header h3 {
-        font-size: 0.9em;
+        font-size: 1em;
+    }
+
+    .disease-card-content {
+        padding: 20px;
+    }
+
+    .disease-card h2 {
+        font-size: 1.1em;
+    }
+
+    .tab-button {
+        padding: 10px 12px;
+        font-size: 0.85em;
+    }
+
+    main.disease-grid {
+        gap: 15px;
+    }
+
+    .card {
+        padding: 20px;
     }
 }

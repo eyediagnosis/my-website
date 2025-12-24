@@ -3,63 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disease Name - Eye Diagnosis</title>
+    <meta name="description" content="Comprehensive guide on Glaucoma - symptoms, causes, treatment options, and management strategies.">
+    <title>Glaucoma - Detailed Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>Disease Name</h1>
-    <h3>Overview & Clinical Summary</h3>
+    <h1>👁 Glaucoma</h1>
+    <h3>Understanding Optic Nerve Damage</h3>
     <p id="abstract">
-        Short abstract explaining what this disease is and why it matters.
+        Glaucoma is a serious eye disease characterized by increased intraocular pressure that damages the optic nerve. Early detection and treatment are crucial to prevent vision loss.
     </p>
 </header>
 
-<main class="disease-container">
-
-    <section class="card">
-        <h2>Definition</h2>
-        <p>
-            Clear definition of the disease and how it affects the eye.
-        </p>
+<!-- MAIN CONTENT -->
+<main>
+    
+    <!-- Disease Overview Section -->
+    <section class="disease-header" style="margin-bottom: 30px;">
+        <h2 style="color: white;">Quick Overview</h2>
+        <p>Glaucoma affects millions worldwide and is a leading cause of irreversible blindness. The good news is that with early treatment, you can often stop further vision loss.</p>
     </section>
 
-    <section class="card">
-        <h2>Symptoms</h2>
-        <p>
-            Common symptoms such as vision changes, pain, or progression.
-        </p>
-    </section>
+    <!-- Tabs Navigation -->
+    <div class="tabs-container" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="definition-tab">Definition</button>
+            <button class="tab-button" data-tab="symptoms-tab">Symptoms</button>
+            <button class="tab-button" data-tab="causes-tab">Causes & Risk Factors</button>
+            <button class="tab-button" data-tab="management-tab">Management & Treatment</button>
+            <button class="tab-button" data-tab="future-tab">Future Actions</button>
+        </div>
 
-    <section class="card">
-        <h2>Causes & Risk Factors</h2>
-        <p>
-            Genetic, environmental, or medical risk factors.
-        </p>
-    </section>
+        <!-- Definition Tab -->
+        <div id="definition-tab" class="tab-content active" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>What is Glaucoma?</h2>
+                <p>Glaucoma is a group of eye conditions characterized by damage to the optic nerve, usually caused by abnormally high intraocular pressure. The optic nerve is responsible for transmitting visual information from the eye to the brain.</p>
+                
+                <h3 style="margin-top: 20px;">Types of Glaucoma:</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Open-angle glaucoma:</strong> The most common type, developing gradually over time.</li>
+                    <li><strong>Angle-closure glaucoma:</strong> A less common but more acute form requiring immediate treatment.</li>
+                    <li><strong>Normal-tension glaucoma:</strong> Occurs with normal eye pressure but still causes optic nerve damage.</li>
+                    <li><strong>Secondary glaucoma:</strong> Results from other eye conditions or diseases.</li>
+                </ul>
+            </div>
 
-    <section class="card">
-        <h2>Management & Treatment</h2>
-        <p>
-            Monitoring, medication, surgery, or lifestyle changes.
-        </p>
-    </section>
+            <!-- Optional: Image Placeholder -->
+            <div class="card" style="text-align: center; background: #f8f9ff;">
+                <p style="color: #999;">📊 [Image/Diagram: Cross-section of eye showing intraocular pressure]</p>
+                <small>Future: Add medical illustration here</small>
+            </div>
+        </div>
 
-    <section class="card">
-        <h2>Future Actions</h2>
-        <p>
-            What patients should do next (screening, follow-ups, prevention).
-        </p>
-    </section>
+        <!-- Symptoms Tab -->
+        <div id="symptoms-tab" class="tab-content" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>Common Symptoms</h2>
+                <p>Early-stage glaucoma often has no symptoms, which is why regular eye exams are essential. Advanced glaucoma may present with:</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                    <div style="background: #f8f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea;">
+                        <h3 style="color: #667eea;">Visual Symptoms</h3>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Blurred vision</li>
+                            <li>Loss of peripheral vision</li>
+                            <li>Tunnel vision (advanced stages)</li>
+                            <li>Rainbow halos around lights</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f8f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #764ba2;">
+                        <h3 style="color: #764ba2;">Physical Symptoms</h3>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li>Eye pain (in acute cases)</li>
+                            <li>Headaches</li>
+                            <li>Redness of the eye</li>
+                            <li>Nausea or vomiting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <strong>⚠️ Warning:</strong> Vision loss from glaucoma cannot be recovered. Seek immediate medical attention if you experience sudden vision changes or eye pain.
+                </div>
+            </div>
+        </div>
+
+        <!-- Causes & Risk Factors Tab -->
+        <div id="causes-tab" class="tab-content" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>Causes & Risk Factors</h2>
+                
+                <h3 style="margin-top: 20px;">Primary Causes:</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Elevated intraocular pressure (IOP):</strong> Fluid buildup in the eye</li>
+                    <li><strong>Structural eye abnormalities:</strong> Affecting aqueous humor drainage</li>
+                    <li><strong>Optic nerve vulnerability:</strong> Individual variation in nerve sensitivity</li>
+                </ul>
+
+                <h3 style="margin-top: 20px;">Risk Factors:</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 15px;">
+                    <div style="background: #f8f9ff; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #667eea;">Non-Modifiable</h4>
+                        <ul style="margin-left: 20px; margin-top: 10px; font-size: 0.95em;">
+                            <li>Age over 60</li>
+                            <li>Family history</li>
+                            <li>Race (higher risk in African Americans)</li>
+                            <li>High myopia</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f8f9ff; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #764ba2;">Modifiable</h4>
+                        <ul style="margin-left: 20px; margin-top: 10px; font-size: 0.95em;">
+                            <li>Elevated intraocular pressure</li>
+                            <li>Diabetes</li>
+                            <li>High blood pressure</li>
+                            <li>Poor circulation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Management & Treatment Tab -->
+        <div id="management-tab" class="tab-content" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>Management & Treatment Options</h2>
+                
+                <h3 style="margin-top: 20px;">Treatment Goals:</h3>
+                <p>The primary goal is to lower intraocular pressure to prevent further optic nerve damage. Treatment options include:</p>
+
+                <h3 style="margin-top: 20px;">1. Medications (First-line treatment)</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Prostaglandin analogs:</strong> Increase fluid outflow from the eye</li>
+                    <li><strong>Beta-blockers:</strong> Reduce fluid production</li>
+                    <li><strong>Carbonic anhydrase inhibitors:</strong> Decrease fluid production</li>
+                    <li><strong>Rho kinase inhibitors:</strong> Newer class reducing IOP</li>
+                </ul>
+
+                <h3 style="margin-top: 20px;">2. Surgical Options</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Laser surgery (trabeculoplasty):</strong> Opens drainage angles</li>
+                    <li><strong>Filtering surgery (trabeculectomy):</strong> Creates new drainage pathway</li>
+                    <li><strong>Minimally invasive glaucoma surgery (MIGS):</strong> Newer procedures with faster recovery</li>
+                </ul>
+
+                <h3 style="margin-top: 20px;">3. Lifestyle & Home Management</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Take medications consistently and on schedule</li>
+                    <li>Regular eye pressure monitoring</li>
+                    <li>Avoid strenuous activities that raise IOP</li>
+                    <li>Manage stress and maintain overall health</li>
+                    <li>Protect eyes from injury</li>
+                </ul>
+
+                <div style="background: #d4edda; border-left: 4px solid #28a745; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <strong>💡 Tip:</strong> Set phone reminders for daily eye drops to ensure consistent medication use.
+                </div>
+            </div>
+        </div>
+
+        <!-- Future Actions Tab -->
+        <div id="future-tab" class="tab-content" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>Recommended Next Steps</h2>
+                
+                <h3 style="margin-top: 20px;">Immediate Actions:</h3>
+                <div style="margin-top: 15px;">
+                    <div style="background: #f8f9ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <h4>✓ Schedule an Eye Exam</h4>
+                        <p>If you haven't had an eye exam in over a year, schedule one immediately. Regular screening is critical for early detection.</p>
+                    </div>
+                    <div style="background: #f8f9ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <h4>✓ Know Your Risk Factors</h4>
+                        <p>Discuss your family history and personal risk factors with your eye care specialist.</p>
+                    </div>
+                    <div style="background: #f8f9ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
+                        <h4>✓ Get Informed</h4>
+                        <p>Join support groups and educational programs to learn more about managing your condition.</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 20px;">Long-term Management:</h3>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Follow-up appointments: Every 3-6 months (or as recommended)</li>
+                    <li>Visual field testing: Annually or as needed</li>
+                    <li>Optic nerve monitoring: Regular imaging and assessment</li>
+                    <li>Medication adjustment: Based on IOP measurements and vision changes</li>
+                </ul>
+
+                <h3 style="margin-top: 20px;">When to Seek Emergency Care:</h3>
+                <ul style="margin-left: 20px; margin-top: 10px; color: #e74c3c;">
+                    <li>Sudden vision loss</li>
+                    <li>Severe eye pain</li>
+                    <li>Persistent redness</li>
+                    <li>Halos around lights</li>
+                    <li>Eye trauma or injury</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </main>
 
+<!-- MODAL for Additional Info -->
+<div id="info-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2>Additional Information</h2>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-    <button onclick="location.href='disease.html'">Back to Diseases</button>
-    <button onclick="location.href='index.html'">Home</button>
-    <button onclick="location.href='app.html'">App Info</button>
+    <button onclick="location.href='disease.html'">← Back to Diseases</button>
+    <button onclick="location.href='index.html'">🏠 Home</button>
+    <button onclick="location.href='app.html'">ℹ️ App Info</button>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

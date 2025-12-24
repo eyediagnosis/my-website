@@ -1,65 +1,119 @@
+﻿@'
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disease Name - Eye Diagnosis</title>
+    <meta name="description" content="Comprehensive guide on Cataracts - symptoms, causes, treatment options, and management strategies.">
+    <title>Cataracts - Detailed Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>Disease Name</h1>
-    <h3>Overview & Clinical Summary</h3>
+    <h1> Cataracts</h1>
+    <h3>Understanding Lens Clouding</h3>
     <p id="abstract">
-        Short abstract explaining what this disease is and why it matters.
+        Cataracts are a clouding of the eye's natural lens that develops gradually over time. Early detection and treatment can help preserve your vision.
     </p>
 </header>
 
-<main class="disease-container">
-
-    <section class="card">
-        <h2>Definition</h2>
-        <p>
-            Clear definition of the disease and how it affects the eye.
-        </p>
+<!-- MAIN CONTENT -->
+<main>
+    
+    <!-- Disease Overview Section -->
+    <section class="disease-header" style="margin-bottom: 30px;">
+        <h2 style="color: white;">Quick Overview</h2>
+        <p>Cataracts are one of the most common eye conditions, affecting millions of people worldwide. Fortunately, cataract surgery is highly effective and has a high success rate.</p>
     </section>
 
-    <section class="card">
-        <h2>Symptoms</h2>
-        <p>
-            Common symptoms such as vision changes, pain, or progression.
-        </p>
-    </section>
+    <!-- Tabs Navigation -->
+    <div class="tabs-container" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="definition-tab">Definition</button>
+            <button class="tab-button" data-tab="symptoms-tab">Symptoms</button>
+            <button class="tab-button" data-tab="causes-tab">Causes & Risk Factors</button>
+            <button class="tab-button" data-tab="management-tab">Management & Treatment</button>
+            <button class="tab-button" data-tab="future-tab">Future Actions</button>
+        </div>
 
-    <section class="card">
-        <h2>Causes & Risk Factors</h2>
-        <p>
-            Genetic, environmental, or medical risk factors.
-        </p>
-    </section>
+        <!-- Definition Tab -->
+        <div id="definition-tab" class="tab-content active" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>What are Cataracts?</h2>
+                <p>A cataract is a clouding of the eye's natural lens, which lies behind the iris and pupil. The lens helps focus light onto the retina at the back of the eye. When the lens becomes cloudy, light cannot pass through clearly, resulting in blurry or dim vision.</p>
+                <p style="margin-top: 10px;"><strong>Note:</strong> For detailed information about this disease, consult with an eye care specialist or ophthalmologist.</p>
+            </div>
+        </div>
 
-    <section class="card">
-        <h2>Management & Treatment</h2>
-        <p>
-            Monitoring, medication, surgery, or lifestyle changes.
-        </p>
-    </section>
+        <!-- Symptoms Tab -->
+        <div id="symptoms-tab" class="tab-content" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>Symptoms</h2>
+                <p>Symptoms vary depending on the stage and type of the condition. Common symptoms may include vision changes, discomfort, and functional limitations in daily activities.</p>
+                <p style="margin-top: 10px;"><strong>Consult with a medical professional for accurate symptom assessment.</strong></p>
+            </div>
+        </div>
 
-    <section class="card">
-        <h2>Future Actions</h2>
-        <p>
-            What patients should do next (screening, follow-ups, prevention).
-        </p>
-    </section>
+        <!-- Causes & Risk Factors Tab -->
+        <div id="causes-tab" class="tab-content" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>Causes & Risk Factors</h2>
+                <p>Multiple factors can contribute to the development of this eye condition. Risk factors may be genetic, environmental, or related to lifestyle and medical history.</p>
+                <p style="margin-top: 10px;"><strong>Understanding your personal risk factors is important for prevention and early detection.</strong></p>
+            </div>
+        </div>
+
+        <!-- Management & Treatment Tab -->
+        <div id="management-tab" class="tab-content" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>Management & Treatment Options</h2>
+                <p>Treatment options vary depending on the severity of the condition and individual patient factors. Early intervention and regular monitoring are often key to managing eye diseases effectively.</p>
+                <p style="margin-top: 10px;"><strong>Your eye care specialist will recommend the most appropriate treatment plan for your specific situation.</strong></p>
+            </div>
+        </div>
+
+        <!-- Future Actions Tab -->
+        <div id="future-tab" class="tab-content" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div class="card">
+                <h2>Recommended Next Steps</h2>
+                <div style="background: #f8f9ff; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                    <h4> Schedule an Eye Exam</h4>
+                    <p>Regular comprehensive eye exams are crucial for early detection and management.</p>
+                </div>
+                <div style="background: #f8f9ff; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                    <h4> Consult with a Specialist</h4>
+                    <p>If you suspect you have this condition, consult with an ophthalmologist for proper diagnosis and treatment.</p>
+                </div>
+                <div style="background: #f8f9ff; padding: 20px; border-radius: 8px; margin-top: 15px;">
+                    <h4> Monitor Your Health</h4>
+                    <p>Keep track of any vision changes and maintain regular follow-up appointments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </main>
 
+<!-- MODAL for Additional Info -->
+<div id="info-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <h2>Additional Information</h2>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<!-- FOOTER -->
 <footer>
-    <button onclick="location.href='disease.html'">Back to Diseases</button>
-    <button onclick="location.href='index.html'">Home</button>
-    <button onclick="location.href='app.html'">App Info</button>
+    <button onclick="location.href='disease.html'"> Back to Diseases</button>
+    <button onclick="location.href='index.html'"> Home</button>
+    <button onclick="location.href='app.html'">ℹ App Info</button>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
+'@

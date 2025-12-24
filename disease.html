@@ -1,90 +1,102 @@
+﻿@'
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disease Info - Eye Diagnosis</title>
+    <meta name="description" content="Learn about 8 common eye diseases with detailed information on symptoms, causes, and treatments.">
+    <title>Eye Diseases - Comprehensive Guide</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        main {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .card {
-            background: #f5f5f5;
-            border-radius: 12px;
-            padding: 20px;
-            text-decoration: none;
-            color: black;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-    </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>Disease Info</h1>
-    <h3>Learn about various eye conditions</h3>
+    <h1> Eye Diseases Guide</h1>
+    <h3>Learn About Common Eye Conditions</h3>
     <p id="abstract">
-        Click a disease below to view its dedicated page with in-depth information.
+        Explore detailed information about 8 major eye diseases. Click on any condition to learn about symptoms, causes, treatments, and management strategies.
     </p>
 </header>
 
-<main>
-    <a class="card" href="disease1.html">
-        <h2>Glaucoma</h2>
-        <p>Damage to the optic nerve often linked to high eye pressure.</p>
+<!-- MAIN CONTENT -->
+<main class="disease-grid fade-in">
+    
+    <a href="disease1.html" class="disease-card">
+        <div class="disease-card-icon"></div>
+        <div class="disease-card-content">
+            <h2>Glaucoma</h2>
+            <p>Optic nerve damage often caused by elevated intraocular pressure, leading to progressive vision loss.</p>
+        </div>
     </a>
 
-    <a class="card" href="disease2.html">
-        <h2>Cataracts</h2>
-        <p>Clouding of the eye’s lens causing blurred or dim vision.</p>
+    <a href="disease2.html" class="disease-card">
+        <div class="disease-card-icon"></div>
+        <div class="disease-card-content">
+            <h2>Cataracts</h2>
+            <p>Clouding of the eye's natural lens that develops gradually, affecting vision clarity.</p>
+        </div>
     </a>
 
-    <a class="card" href="disease3.html">
-        <h2>Diabetic Retinopathy</h2>
-        <p>Retinal damage caused by long-term diabetes.</p>
+    <a href="disease3.html" class="disease-card">
+        <div class="disease-card-icon"></div>
+        <div class="disease-card-content">
+            <h2>Diabetic Retinopathy</h2>
+            <p>Retinal damage caused by prolonged high blood sugar levels in diabetes patients.</p>
+        </div>
     </a>
 
-    <a class="card" href="disease4.html">
-        <h2>Macular Degeneration</h2>
-        <p>Loss of central vision due to macula deterioration.</p>
+    <a href="disease4.html" class="disease-card">
+        <div class="disease-card-icon"></div>
+        <div class="disease-card-content">
+            <h2>Macular Degeneration</h2>
+            <p>Progressive vision loss affecting the macula, the central part of the retina responsible for sharp vision.</p>
+        </div>
     </a>
 
-    <a class="card" href="disease5.html">
-        <h2>Retinitis Pigmentosa</h2>
-        <p>Genetic disorder causing night blindness and tunnel vision.</p>
+    <a href="disease5.html" class="disease-card">
+        <div class="disease-card-icon"></div>
+        <div class="disease-card-content">
+            <h2>Retinitis Pigmentosa</h2>
+            <p>Genetic disorder causing gradual loss of light-sensitive cells, beginning with night blindness.</p>
+        </div>
     </a>
 
-    <a class="card" href="disease6.html">
-        <h2>Conjunctivitis</h2>
-        <p>Inflammation of the conjunctiva (pink eye).</p>
+    <a href="disease6.html" class="disease-card">
+        <div class="disease-card-icon"></div>
+        <div class="disease-card-content">
+            <h2>Conjunctivitis</h2>
+            <p>Inflammation of the conjunctiva (pink eye), commonly caused by allergies, infection, or irritation.</p>
+        </div>
     </a>
 
-    <a class="card" href="disease7.html">
-        <h2>Uveitis</h2>
-        <p>Inflammation of the middle layer of the eye.</p>
+    <a href="disease7.html" class="disease-card">
+        <div class="disease-card-icon"></div>
+        <div class="disease-card-content">
+            <h2>Uveitis</h2>
+            <p>Inflammation of the uvea (middle layer of the eye), causing pain and potential vision complications.</p>
+        </div>
     </a>
 
-    <a class="card" href="disease8.html">
-        <h2>Keratoconus</h2>
-        <p>Cornea thins and bulges outward, distorting vision.</p>
+    <a href="disease8.html" class="disease-card">
+        <div class="disease-card-icon"></div>
+        <div class="disease-card-content">
+            <h2>Keratoconus</h2>
+            <p>Progressive eye disease where the cornea thins and gradually bulges into a cone shape.</p>
+        </div>
     </a>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
-    <button onclick="location.href='index.html'">Home</button>
-    <button onclick="location.href='app.html'">App Info</button>
-    <button onclick="location.href='random.html'">Random</button>
+    <button onclick="location.href='index.html'"> Home</button>
+    <button onclick="location.href='app.html'">ℹ App Info</button>
+    <button onclick="location.href='random.html'"> Random</button>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
+'@
