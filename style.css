@@ -197,6 +197,31 @@ p {
     height: 56px;
 }
 
+/* Hero image styles */
+.hero-image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 10px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+.hero-image .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Small optimization: placeholder blur effect until real image loads (if you replace with large images) */
+.hero-img {
+    filter: blur(0px);
+    transition: filter 300ms ease-out, transform 350ms ease-out;
+}
+.hero-img.loading {
+    filter: blur(6px);
+    transform: scale(1.02);
+}
+
 /* Disclaimer styling */
 .disclaimer {
     margin: 30px auto 20px;
