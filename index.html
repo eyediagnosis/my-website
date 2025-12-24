@@ -3,13 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Eye Diagnosis</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is a simple starter website.</p>
-    <button id="myButton">Click me</button>
+    <!-- Header -->
+    <header>
+        <h1>Eye Diagnosis</h1>
+        <h3>Your tool for analyzing eye images and learning about eye health</h3>
+        <p id="abstract">Upload an image of your eye to get an AI-generated report with confidence scores, diagnosis info, and recommended actions.</p>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Drag & Drop Upload Section -->
+        <section id="upload-section" class="card fade-in">
+            <h2>Upload Eye Image</h2>
+            <div id="drop-area">
+                <p>Drag & drop your image here, or click to select</p>
+                <input type="file" id="eyeImage" accept="image/*">
+            </div>
+            <div id="preview"></div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="card fade-in">
+            <h2>Analysis Report</h2>
+            <div class="result-card" id="confidence">Confidence: N/A</div>
+            <div class="result-card" id="diagnosis">Diagnosis: N/A</div>
+            <div class="result-card" id="future">Future Actions: N/A</div>
+            <div class="result-card" id="definition">Definition: N/A</div>
+        </section>
+    </main>
+
+    <!-- Footer / Navigation -->
+    <footer>
+        <button onclick="location.href='disease.html'">Disease Info</button>
+        <button onclick="location.href='app.html'">App Info</button>
+        <button onclick="location.href='random.html'">Random</button>
+    </footer>
 
     <script src="script.js"></script>
 </body>
