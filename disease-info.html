@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eye disease library with AI-focused clinical summaries.">
+    <title>Disease Info | Eye Disease Diagnosis</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="page">
+    <header class="hero">
+        <div class="container">
+            <nav class="navbar" aria-label="Primary">
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="8" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </span>
+                    Eye Disease Diagnosis
+                </div>
+                <div class="nav-links">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="disease-info.html">Disease Info</a>
+                    <a class="nav-link" href="app-info.html">App Info</a>
+                    <a class="nav-link" href="explore-more.html">Explore More</a>
+                    <a class="nav-link" href="about.html">About Us</a>
+                </div>
+            </nav>
+
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <div class="badge-row">
+                        <span class="badge">Disease Library</span>
+                        <span class="badge badge-alt">8 Conditions</span>
+                    </div>
+                    <h1>Clinical Condition Library</h1>
+                    <p>Search, filter, and review concise summaries for the 8 conditions supported by the Eye Disease Diagnosis system.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="#library">Browse library</a>
+                        <a class="btn btn-secondary" href="index.html#upload">Run a demo</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <h3>Quick guidance</h3>
+                    <p class="section-subtitle">Each condition includes symptoms, risk factors, next steps, and urgent care notes.</p>
+                    <div class="grid">
+                        <div class="stat">
+                            <span>Info style</span>
+                            <strong>Concise & practical</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Updated</span>
+                            <strong>For AI outputs</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Disclaimer</span>
+                            <strong>Not medical advice</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="library" class="section reveal">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h2 class="section-title">Search and Filter</h2>
+                        <p class="section-subtitle">Find a condition fast using search or filter chips.</p>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input id="disease-search" class="input" type="search" placeholder="Search conditions" aria-label="Search diseases">
+                </div>
+                <div class="filter-chips" role="listbox" aria-label="Filter conditions">
+                    <button class="chip active" data-filter="all" type="button">All</button>
+                    <button class="chip" data-filter="ageDegeneration" type="button">Age-Related Macular Degeneration (AMD)</button>
+                    <button class="chip" data-filter="glaucoma" type="button">Glaucoma</button>
+                    <button class="chip" data-filter="cataract" type="button">Cataract</button>
+                    <button class="chip" data-filter="diabetes" type="button">Diabetic Retinopathy</button>
+                    <button class="chip" data-filter="hypertension" type="button">Hypertensive Retinopathy</button>
+                    <button class="chip" data-filter="myopia" type="button">Myopia (Nearsightedness)</button>
+                    <button class="chip" data-filter="normal" type="button">No Abnormality Detected</button>
+                    <button class="chip" data-filter="others" type="button">Other / Uncertain</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="card">
+                <h2 class="section-title">Condition Cards</h2>
+                <p class="section-subtitle">Quick facts and overview at a glance.</p>
+                <div id="disease-grid" class="disease-grid"></div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="card">
+                <h2 class="section-title">Condition Details</h2>
+                <p class="section-subtitle">Expand each accordion for symptoms, risk factors, and guidance.</p>
+                <div id="disease-accordion" class="disease-accordion" data-disease-accordion="true"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="brand" style="margin-bottom: 12px;">
+                    <span class="brand-mark" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="8" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </span>
+                    Eye Disease Diagnosis
+                </div>
+                <p class="section-subtitle">Clinical summaries aligned with AI report outputs.</p>
+                <div class="footer-meta">&copy; <span id="year"></span> Eye Disease Diagnosis</div>
+                <button class="btn btn-ghost btn-small effects-toggle" type="button" data-effects-toggle>Effects: High</button>
+            </div>
+            <div>
+                <div class="footer-title">Explore</div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#upload">Run demo</a>
+                    <a href="app-info.html">App info</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-title">Connect</div>
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="mailto:support@eyediagnosis.com">Contact</a>
+                    <a href="explore-more.html">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/diseases.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+</html>
+

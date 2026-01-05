@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore more interactive learning tools for eye health conditions.">
+    <title>Explore More | Eye Disease Diagnosis</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="page">
+    <header class="hero">
+        <div class="container">
+            <nav class="navbar" aria-label="Primary">
+                <div class="brand">
+                    <span class="brand-mark" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="8" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </span>
+                    Eye Disease Diagnosis
+                </div>
+                <div class="nav-links">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="disease-info.html">Disease Info</a>
+                    <a class="nav-link" href="app-info.html">App Info</a>
+                    <a class="nav-link" href="explore-more.html">Explore More</a>
+                    <a class="nav-link" href="about.html">About Us</a>
+                </div>
+            </nav>
+
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <div class="badge-row">
+                        <span class="badge">Explore More</span>
+                        <span class="badge badge-alt">Interactive Learning</span>
+                    </div>
+                    <h1>Hands-On Learning for Eye Health</h1>
+                    <p>Discover the eight supported conditions through quick tools, guided matching, and fast quizzes.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="#explorer">Start exploring</a>
+                        <a class="btn btn-secondary" href="index.html#upload">Run a demo</a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <h3>Learning toolkit</h3>
+                    <p class="section-subtitle">Interactive modules built for clarity, speed, and confidence.</p>
+                    <div class="grid">
+                        <div class="stat">
+                            <span>Modules</span>
+                            <strong>5 learning tools</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Focus</span>
+                            <strong>8 conditions</strong>
+                        </div>
+                        <div class="stat">
+                            <span>Mode</span>
+                            <strong>All in-browser</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section reveal">
+            <div class="card">
+                <h2 class="section-title">Progress Tracker</h2>
+                <p class="section-subtitle">See how much of the library you have explored.</p>
+                <div class="progress-grid">
+                    <div class="progress-card">
+                        <div class="section-subtitle">Diseases explored</div>
+                        <strong id="explored-count">0/8</strong>
+                    </div>
+                    <div class="progress-card">
+                        <div class="section-subtitle">Quiz best score</div>
+                        <strong id="quiz-best-score">0%</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="explorer" class="section reveal">
+            <div class="card">
+                <h2 class="section-title">Disease Explorer</h2>
+                <p class="section-subtitle">Open any condition to review symptoms, risks, and guidance.</p>
+                <div id="explore-disease-grid" class="explore-grid"></div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="card">
+                <h2 class="section-title">Symptom Matcher</h2>
+                <p class="section-subtitle">An educational tool that suggests possible matches based on common symptoms.</p>
+                <div class="notice-banner">
+                    Educational only. This tool is not a diagnosis and should not replace clinical care.
+                </div>
+                <div class="matcher-grid">
+                    <div id="symptom-checklist"></div>
+                    <div id="symptom-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="card">
+                <h2 class="section-title">Quick Quiz</h2>
+                <p class="section-subtitle">Test your knowledge and get instant feedback.</p>
+                <div class="quiz-card">
+                    <div id="quiz-container"></div>
+                    <div class="section-subtitle" id="quiz-score">Score: 0/0</div>
+                    <div id="quiz-feedback" class="section-subtitle"></div>
+                    <button id="quiz-next" class="btn btn-secondary btn-small" type="button">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <div class="card">
+                <h2 class="section-title">Flashcards</h2>
+                <p class="section-subtitle">Tap to flip each card. Shuffle for a new order.</p>
+                <button id="flashcard-shuffle" class="btn btn-ghost btn-small" type="button">Shuffle cards</button>
+                <div id="flashcard-grid" class="flashcard-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="brand" style="margin-bottom: 12px;">
+                    <span class="brand-mark" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="8" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </span>
+                    Eye Disease Diagnosis
+                </div>
+                <p class="section-subtitle">Interactive learning for confident next steps.</p>
+                <div class="footer-meta">&copy; <span id="year"></span> Eye Disease Diagnosis</div>
+                <button class="btn btn-ghost btn-small effects-toggle" type="button" data-effects-toggle>Effects: High</button>
+            </div>
+            <div>
+                <div class="footer-title">Explore</div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="disease-info.html">Conditions</a>
+                    <a href="app-info.html">App info</a>
+                </div>
+            </div>
+            <div>
+                <div class="footer-title">Connect</div>
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="mailto:support@eyediagnosis.com">Contact</a>
+                    <a href="explore-more.html">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="disease-modal" class="modal" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="disease-modal-title">
+            <div class="modal-header">
+                <h3 id="disease-modal-title">Disease Details</h3>
+                <button id="disease-modal-close" class="modal-close" type="button">Close</button>
+            </div>
+            <div id="disease-modal-body"></div>
+        </div>
+    </div>
+
+    <script src="assets/diseases.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+</html>
+
