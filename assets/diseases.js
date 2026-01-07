@@ -1,4 +1,4 @@
-window.DISEASE_KEYS = [
+﻿window.DISEASE_KEYS = [
     'ageDegeneration',
     'glaucoma',
     'cataract',
@@ -12,7 +12,7 @@ window.DISEASE_KEYS = [
 window.DISEASES = {
     ageDegeneration: {
         key: 'ageDegeneration',
-        displayName: 'Age-Related Macular Degeneration (AMD)',
+        displayName: 'Age Degernation (AMD)',
         overview: 'A chronic condition that affects the macula and can blur central vision.',
         symptoms: [
             'Blurry or distorted central vision',
@@ -62,7 +62,7 @@ window.DISEASES = {
     },
     diabetes: {
         key: 'diabetes',
-        displayName: 'Diabetic Retinopathy',
+        displayName: 'Diabetes',
         overview: 'Blood sugar damage to retinal vessels that can reduce vision over time.',
         symptoms: ['Floaters or blurred vision', 'Dark areas in vision', 'Vision changes in both eyes'],
         riskFactors: ['Long-term diabetes', 'High blood pressure', 'Pregnancy with diabetes'],

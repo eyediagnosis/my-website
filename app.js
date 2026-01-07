@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // TAB FUNCTIONALITY
 // ============================================
 function initializeTabs() {
@@ -148,10 +148,10 @@ function handleFiles(files) {
 
 function simulateAIAnalysis() {
     const diseaseDisplayNames = {
-        ageDegeneration: 'Age-Related Macular Degeneration (AMD)',
+        ageDegeneration: 'Age Degernation (AMD)',
         glaucoma: 'Glaucoma',
         cataract: 'Cataract',
-        diabetes: 'Diabetic Retinopathy',
+        diabetes: 'Diabetes',
         hypertension: 'Hypertensive Retinopathy',
         myopia: 'Myopia (Nearsightedness)',
         normal: 'No Abnormality Detected',

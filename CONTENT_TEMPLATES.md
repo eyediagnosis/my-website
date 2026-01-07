@@ -1,4 +1,4 @@
-# 📝 Disease Content Templates & Examples
+﻿# ðŸ“ Disease Content Templates & Examples
 
 This file provides example content you can copy and customize for each disease page.
 
@@ -8,7 +8,7 @@ This file provides example content you can copy and customize for each disease p
 
 ### Header Section
 ```html
-<h1>👁 Glaucoma</h1>
+<h1>ðŸ‘ Glaucoma</h1>
 <h3>Understanding Optic Nerve Damage</h3>
 <p id="abstract">
     Glaucoma is a serious eye disease characterized by increased intraocular pressure that damages 
@@ -131,16 +131,16 @@ Advanced glaucoma may present with:</p>
 <h3 style="margin-top: 20px;">Immediate Actions:</h3>
 <div style="margin-top: 15px;">
     <div style="background: #f8f9ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
-        <h4>✓ Schedule an Eye Exam</h4>
+        <h4>âœ“ Schedule an Eye Exam</h4>
         <p>If you haven't had an eye exam in over a year, schedule one immediately. 
         Regular screening is critical for early detection.</p>
     </div>
     <div style="background: #f8f9ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
-        <h4>✓ Know Your Risk Factors</h4>
+        <h4>âœ“ Know Your Risk Factors</h4>
         <p>Discuss your family history and personal risk factors with your eye care specialist.</p>
     </div>
     <div style="background: #f8f9ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #667eea;">
-        <h4>✓ Get Informed</h4>
+        <h4>âœ“ Get Informed</h4>
         <p>Join support groups and educational programs to learn more about managing your condition.</p>
     </div>
 </div>
@@ -169,7 +169,7 @@ Advanced glaucoma may present with:</p>
 
 ### Header
 ```html
-<h1>☁️ Cataracts</h1>
+<h1>â˜ï¸ Cataracts</h1>
 <h3>Understanding Lens Clouding</h3>
 <p id="abstract">
     Cataracts are a clouding of the eye's natural lens that develops gradually over time. 
@@ -273,9 +273,9 @@ Use this structure for diseases 3-8. Replace [CONTENT] with actual information:
 
 <h3 style="margin-top: 20px;">Immediate:</h3>
 <ul style="margin-left: 20px; margin-top: 10px;">
-    <li>✓ [ACTION 1]</li>
-    <li>✓ [ACTION 2]</li>
-    <li>✓ [ACTION 3]</li>
+    <li>âœ“ [ACTION 1]</li>
+    <li>âœ“ [ACTION 2]</li>
+    <li>âœ“ [ACTION 3]</li>
 </ul>
 
 <h3 style="margin-top: 20px;">When to Seek Care:</h3>
@@ -289,50 +289,50 @@ Use this structure for diseases 3-8. Replace [CONTENT] with actual information:
 
 ## 8 Diseases - Quick Reference
 
-1. **Glaucoma** 👁
-   - Icon: 👁
+1. **Glaucoma** ðŸ‘
+   - Icon: ðŸ‘
    - Key: Optic nerve damage from high pressure
    - Symptoms: No early symptoms, peripheral vision loss
    - Treatment: Medications, laser/surgery
 
-2. **Cataracts** ☁️
-   - Icon: ☁️
+2. **Cataracts** â˜ï¸
+   - Icon: â˜ï¸
    - Key: Lens becomes cloudy
    - Symptoms: Blurred vision, difficulty at night
    - Treatment: Glasses, surgery
 
-3. **Diabetic Retinopathy** 🩸
-   - Icon: 🩸
+3. **Diabetes** ðŸ©¸
+   - Icon: ðŸ©¸
    - Key: Retinal damage from diabetes
    - Symptoms: Floaters, vision loss
    - Treatment: Laser, injections, control diabetes
 
-4. **Macular Degeneration** 🔭
-   - Icon: 🔭
+4. **Macular Degeneration** ðŸ”­
+   - Icon: ðŸ”­
    - Key: Central vision loss in aging
    - Symptoms: Blurred central vision
    - Treatment: Vitamins, injections, devices
 
-5. **Retinitis Pigmentosa** 🌙
-   - Icon: 🌙
+5. **Retinitis Pigmentosa** ðŸŒ™
+   - Icon: ðŸŒ™
    - Key: Genetic disorder, rod/cone dysfunction
    - Symptoms: Night blindness, tunnel vision
    - Treatment: Vitamin A, genetic therapy
 
-6. **Conjunctivitis** 🔴
-   - Icon: 🔴
+6. **Conjunctivitis** ðŸ”´
+   - Icon: ðŸ”´
    - Key: Eye inflammation (pink eye)
    - Symptoms: Red eyes, discharge, itching
    - Treatment: Eye drops, antibiotics if bacterial
 
-7. **Uveitis** ⚡
-   - Icon: ⚡
+7. **Uveitis** âš¡
+   - Icon: âš¡
    - Key: Middle eye layer inflammation
    - Symptoms: Pain, photophobia, floaters
    - Treatment: Anti-inflammatory drops, systemic steroids
 
-8. **Keratoconus** 🔄
-   - Icon: 🔄
+8. **Keratoconus** ðŸ”„
+   - Icon: ðŸ”„
    - Key: Cornea thins and cones outward
    - Symptoms: Blurred/distorted vision, astigmatism
    - Treatment: Glasses, contacts, corneal transplant
@@ -344,12 +344,12 @@ Use this structure for diseases 3-8. Replace [CONTENT] with actual information:
 ```html
 <!-- Green box for tips -->
 <div style="background: #d4edda; border-left: 4px solid #28a745; padding: 15px; border-radius: 8px;">
-    <strong>💡 Tip:</strong> Your helpful tip here
+    <strong>ðŸ’¡ Tip:</strong> Your helpful tip here
 </div>
 
 <!-- Yellow box for warnings -->
 <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px;">
-    <strong>⚠️ Warning:</strong> Important warning here
+    <strong>âš ï¸ Warning:</strong> Important warning here
 </div>
 
 <!-- Purple box for info -->
@@ -388,4 +388,4 @@ Use this structure for diseases 3-8. Replace [CONTENT] with actual information:
 
 ---
 
-Ready to customize! Copy sections above and adapt for your content. 🎯
+Ready to customize! Copy sections above and adapt for your content. ðŸŽ¯

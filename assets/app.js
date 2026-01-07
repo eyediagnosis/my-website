@@ -1,4 +1,4 @@
-function initializeTabs() {
+﻿function initializeTabs() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -607,7 +607,7 @@ function initializeQuiz() {
         },
         {
             question: 'Cloudy or hazy vision with glare sensitivity is a classic sign of:',
-            options: ['Cataract', 'Diabetic Retinopathy', 'AMD', 'Hypertension'],
+            options: ['Cataract', 'Diabetes', 'AMD', 'Hypertension'],
             answer: 0,
             explanation: 'Cataracts cloud the lens and increase glare sensitivity.',
             key: 'cataract'
@@ -621,13 +621,13 @@ function initializeQuiz() {
         },
         {
             question: 'Sudden floaters or flashes can be a warning sign for:',
-            options: ['Myopia', 'Normal', 'Others', 'Diabetic Retinopathy'],
+            options: ['Myopia', 'Normal', 'Others', 'Diabetes'],
             answer: 3,
-            explanation: 'Diabetic retinopathy can cause new floaters or flashes.',
+            explanation: 'Diabetes can cause new floaters or flashes.',
             key: 'diabetes'
         },
         {
-            question: 'Age-related macular degeneration mainly affects:',
+            question: 'Age Degernation mainly affects:',
             options: ['Central vision', 'Peripheral vision', 'Night vision only', 'Depth perception'],
             answer: 0,
             explanation: 'AMD impacts the macula and central vision clarity.',
@@ -714,8 +714,11 @@ function initializeQuiz() {
         if (percent > best) {
             localStorage.setItem('quizBestScore', String(percent));
         }
-        feedbackEl.textContent = `Quiz complete. You scored ${percent}%. Great job learning!`;
         updateProgressTracker();
+        current = 0;
+        score = 0;
+        renderQuestion();
+        feedbackEl.textContent = `Quiz complete. You scored ${percent}%. Starting over.`;
     });
 
     renderQuestion();

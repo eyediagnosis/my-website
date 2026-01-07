@@ -1,4 +1,4 @@
-/* Style Guide
+﻿/* Style Guide
 Design system tokens:
 - Colors: --color-bg-900, --color-bg-800, --color-surface-900, --color-surface-800, --color-surface-700, --color-line, --color-text, --color-text-muted, --color-accent-500, --color-accent-400, --color-accent-700, --color-warm-500, --color-warm-600, --color-success-500, --color-neutral-500
 - Typography scale: --font-size-1..6, --font-weight-regular/medium/semibold/bold
@@ -821,25 +821,28 @@ body.low-effects .reveal {
     border-radius: var(--radius-2);
     border: 1px solid var(--color-line);
     background: var(--color-surface-700);
+    color: var(--color-text);
     padding: var(--space-4);
     min-height: 140px;
     display: grid;
     align-content: center;
     gap: var(--space-2);
-    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .flashcard.flipped .flashcard-inner {
-    transform: rotateY(180deg);
+    background: var(--color-surface-800);
+    border-color: rgba(24, 228, 214, 0.4);
 }
 
 .flashcard-front,
 .flashcard-back {
     backface-visibility: hidden;
+    color: var(--color-text);
 }
 
 .flashcard-back {
-    transform: rotateY(180deg);
+    transform: none;
 }
 
 .flashcard.flipped .flashcard-front {
